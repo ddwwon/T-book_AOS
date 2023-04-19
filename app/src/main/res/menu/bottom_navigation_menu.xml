@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/menu_recommend"
+            android:title="@string/recommend"
+            android:icon="@drawable/ic_recommend"/>
+        <item
+            android:id="@+id/menu_home"
+            android:title="@string/home"
+            android:icon="@drawable/ic_home"/>
+        <item
+            android:id="@+id/menu_myPage"
+            android:title="@string/myPage"
+            android:icon="@drawable/ic_mypage"/>
+    </group>
+</menu>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tbook</string>
+
+    <!-- 하단 네비게이션 바 -->
+    <string name="recommend">추천</string>
+    <string name="home">홈</string>
+    <string name="myPage">마이페이지</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
