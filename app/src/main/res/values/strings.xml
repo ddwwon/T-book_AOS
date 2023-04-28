@@ -5,6 +5,72 @@
     <string name="recommend">추천</string>
     <string name="home">홈</string>
     <string name="myPage">마이페이지</string>
+
+    <!-- 추천 -->
+    <string name="next">다음으로</string>
+    <string-array name="question_list">
+        <item>선호하는 제조사를\n선택해주세요.</item>
+        <item>노트북 용도를\n선택해주세요.</item>
+        <item>노트북 무게를\n선택해주세요.</item>
+        <item>원하는 가격대를\n선택해주세요.</item>
+        <item>우측 숫자키(텐키)가\n필요한가요?</item>
+        <item>윈도우 자가설치가\n가능한가요?</item>
+        <item>화면 크기를\n선택해주세요.</item>
+    </string-array>
+    <string name="prefer_manufactor">선호하는 제조사를\n선택해주세요.</string>
+    <string-array name="manufactor_list">
+        <item>MSI</item>
+        <item>SAMSUNG</item>
+        <item>ASUS</item>
+        <item>LG</item>
+    </string-array>
+    <string name="usage">노트북 용도를\n선택해주세요.</string>
+    <string-array name="usage_list">
+        <item>가벼운 문서작업</item>
+        <item>그래픽 작업</item>
+        <item>고사양 작업</item>
+        <item>코딩</item>
+    </string-array>
+    <string name="notebook_weight">노트북 무게를\n선택해주세요.</string>
+    <string-array name="notebook_weight_list">
+        <item>1kg 이하</item>
+        <item>1.5kg 이하</item>
+        <item>2kg 이하</item>
+        <item>2.5kg 이하</item>
+        <item>상관없음</item>
+    </string-array>
+    <string name="price">원하는 가격대를\n선택해주세요.</string>
+    <string-array name="price_list">
+        <item>50만원 이하</item>
+        <item>75만원 이하</item>
+        <item>100만원 이하</item>
+        <item>150만원 이하</item>
+        <item>200만원 이하</item>
+        <item>200만원 이상</item>
+        <item>상관없음</item>
+    </string-array>
+    <string name="ten_key">우측 숫자키(텐키)가\n필요한가요?</string>
+    <string-array name="yes_no">
+        <item>예</item>
+        <item>아니오</item>
+    </string-array>
+    <string name="window">윈도우 자가설치가\n가능한가요?</string>
+    <string name="battery">
+        <item>10시간 이하</item>
+        <item>15시간 이하</item>
+        <item>20시간 이하</item>
+        <item>30시간 이하</item>
+        <item>상관없음</item>
+    </string>
+    <string name="display">화면 크기를\n선택해주세요.</string>
+    <string-array name="display_list">
+        <item>13.3인치</item>
+        <item>15.6인치</item>
+        <item>16인치</item>
+        <item>17인치</item>
+        <item>상관없음</item>
+    </string-array>
+    <string name="recommend_notebook">트북이의\n추천🎵</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

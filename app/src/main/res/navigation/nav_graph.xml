@@ -15,8 +15,12 @@
         android:label="fragment_my_page"
         tools:layout="@layout/fragment_my_page" />
     <fragment
-        android:id="@id/menu_recommend"
+        android:id="@+id/menu_recommend"
         android:name="com.linker.tbook.view.RecommendFragment"
         android:label="fragment_recommend"
         tools:layout="@layout/fragment_recommend" />
+    <fragment
+        android:id="@id/menu_recommend_result"
+        android:name="com.linker.tbook.view.RecommendResultFragment"
+        android:label="RecommendResultFragment" />
 </navigation>
