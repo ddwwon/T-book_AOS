@@ -1,4 +1,4 @@
-package com.linker.tbook.view
+package com.linker.tbook.view.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

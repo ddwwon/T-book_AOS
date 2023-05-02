@@ -6,7 +6,7 @@
     app:startDestination="@id/menu_home">
     <fragment
         android:id="@id/menu_home"
-        android:name="com.linker.tbook.view.HomeFragment"
+        android:name="com.linker.tbook.view.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
