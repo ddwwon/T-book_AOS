@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group>
         <item
-            android:id="@+id/menu_recommend"
+            android:id="@+id/menu_recommend_result"
             android:title="@string/recommend"
             android:icon="@drawable/ic_recommend"/>
         <item

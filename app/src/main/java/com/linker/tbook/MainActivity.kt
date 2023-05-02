@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     private fun setBottomNavigation() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
             if(destination.id == R.id.menu_home ||
-                    destination.id == R.id.menu_recommend ||
+                    destination.id == R.id.menu_recommend_result ||
                     destination.id == R.id.menu_myPage) {
                 binding.navBottom.visibility = View.VISIBLE
             } else {
