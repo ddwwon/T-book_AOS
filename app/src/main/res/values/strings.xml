@@ -8,7 +8,7 @@
 
     <!-- 로그인 -->
     <string name="login">로그인</string>
-    <string name="login_notice">트북이의 혜택과 정보를 얻으시려면 로그인이 필요해요.</string>
+    <string name="login_notice">트북이의 혜택과 정보를 얻으시려면\n로그인이 필요해요.</string>
     <string name="login_hint_email">email</string>
     <string name="login_hint_password">password</string>
     <string name="forget_password">비밀번호를 잊어버리셨나요?</string>
@@ -17,7 +17,7 @@
 
     <!-- 회원가입 -->
     <string name="sign_up">회원가입</string>
-    <string name="sign_up_notice">트북이 서비스 이용을 위해 고객님의 정보가 필요해요.</string>
+    <string name="sign_up_notice">트북이 서비스 이용을 위해\n고객님의 정보가 필요해요.</string>
     <string name="sign_up_hint_email">이메일</string>
     <string name="sign_up_hint_password">비밀번호</string>
     <string name="sign_up_hint_password_confirm">비밀번호 확인</string>
