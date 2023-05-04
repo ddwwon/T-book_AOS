@@ -11,7 +11,7 @@
     <string name="login_notice">트북이의 혜택과 정보를 얻으시려면\n로그인이 필요해요.</string>
     <string name="login_hint_email">email</string>
     <string name="login_hint_password">password</string>
-    <string name="forget_password">비밀번호를 잊어버리셨나요?</string>
+    <string name="forget_password">비밀번호를 잊으셨나요?</string>
     <string name="login_kakao">카카오 ID로 로그인하기</string>
     <string name="login_google">구글 ID로 로그인하기</string>
 
@@ -25,11 +25,18 @@
     <string name="sign_up_hint_address">주소</string>
     <string name="sign_up_hint_phone">전화번호</string>
 
+    <!-- 비밀번호 찾기 -->
+    <string name="forget_password_notice">아래의 정보를 입력하면\n비밀번호를 재설정 할 수 있어요.</string>
+    <string name="chaneg_password">비밀번호 변경</string>
+    <string name="restore_password">비밀번호 재설정</string>
+    <string name="done_password">변경 완료</string>
+
     <!-- 사용 방식 선택 -->
     <string name="use_option_notice">원하는 사용 방식을 선택하세요.</string>
     <string name="use_option_ai">AI 추천 모드</string>
     <string name="use_option_normal">일반 모드</string>
     <string name="use_option_confirm">선택 완료</string>
+    <string name="use_option_change_notice">마이페이지 > 환경설정에서 변경 가능합니다</string>
 
     <!-- 추천 -->
     <string name="next">다음으로</string>

@@ -5,6 +5,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_gray">#F2F2F2</color>
     <color name="hint_gray">#7D7D7D</color>
+    <color name="bottom_menu_gray">#D8D8D8</color>
     <color name="normal_gray">#CCCCCC</color>
     <color name="transparent">#00000000</color>
     <color name="kakao_yellow">#FBFF36</color>

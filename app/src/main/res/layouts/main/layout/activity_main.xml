@@ -24,7 +24,9 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="start"
         android:background="@color/white"
+        app:itemBackground="@drawable/bottom_menu_item_selector"
         app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/bottom_menu_selector_color"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_navigation_menu"/>
 
