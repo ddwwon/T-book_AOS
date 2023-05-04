@@ -13,7 +13,7 @@
         android:id="@+id/textbtn_goto_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="34dp"
         android:text="@string/sign_up"
         android:textColor="@color/black"
@@ -128,7 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_marginHorizontal="48dp"
+            android:layout_marginHorizontal="40dp"
             android:orientation="vertical"
             android:layout_below="@id/btn_login">
 
@@ -137,7 +137,9 @@
                 android:id="@+id/btn_realtive_kakao_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/yellow_solid_round_button">
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/yellow_solid_round_button"
+                android:elevation="3dp">
 
                 <ImageView
                     android:layout_width="18dp"
@@ -166,8 +168,10 @@
                 android:id="@+id/btn_realtive_google_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/navy_solid_round_button">
+                android:background="@drawable/navy_solid_round_button"
+                android:elevation="3dp">
 
                 <ImageView
                     android:layout_width="18dp"
