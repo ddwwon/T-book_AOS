@@ -7,6 +7,7 @@
     <color name="hint_gray">#7D7D7D</color>
     <color name="sign_input_line">#F0F0F0</color>
     <color name="sign_label_gray">#767676</color>
+    <color name="select_mode_gray">#9C9C9C</color>
     <color name="bottom_menu_gray">#D8D8D8</color>
     <color name="normal_gray">#CCCCCC</color>
     <color name="transparent">#00000000</color>

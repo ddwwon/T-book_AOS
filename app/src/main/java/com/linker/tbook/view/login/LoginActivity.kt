@@ -7,6 +7,7 @@ import android.view.View
 import com.linker.tbook.MainActivity
 import com.linker.tbook.databinding.ActivityLoginBinding
 import com.linker.tbook.view.login.findPassword.FindPasswordActivity
+import com.linker.tbook.view.select_mode.SelectModeActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -29,9 +30,9 @@ class LoginActivity : AppCompatActivity() {
         // 로그인 버튼 선택 시
         binding.btnLogin.setOnClickListener {
 
-            // 메인 페이지로 이동
-            val mainActivity = Intent(this, MainActivity::class.java)
-            startActivity(mainActivity)
+            // 사용방식 선택 페이지로 이동
+            val selectModeActivity = Intent(this, SelectModeActivity::class.java)
+            startActivity(selectModeActivity)
             finish()
         }
     }
