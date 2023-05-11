@@ -12,16 +12,16 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@id/menu_myPage"
-        android:name="com.linker.tbook.view.component.MyPageFragment"
+        android:name="com.linker.tbook.view.component.my_page.MyPageFragment"
         android:label="fragment_my_page"
         tools:layout="@layout/fragment_my_page" />
     <fragment
         android:id="@+id/menu_recommend"
-        android:name="com.linker.tbook.view.component.RecommendFragment"
+        android:name="com.linker.tbook.view.component.recommend.RecommendFragment"
         android:label="fragment_recommend"
         tools:layout="@layout/fragment_recommend" />
     <fragment
         android:id="@id/menu_recommend_result"
-        android:name="com.linker.tbook.view.component.RecommendResultFragment"
+        android:name="com.linker.tbook.view.component.recommend.RecommendResultFragment"
         android:label="RecommendResultFragment" />
 </navigation>

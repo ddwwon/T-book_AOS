@@ -1,18 +1,21 @@
-package com.linker.tbook
+package com.linker.tbook.view.component
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
+import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.snackbar.Snackbar
 import com.linker.tbook.R
 import com.linker.tbook.databinding.ActivityMainBinding
+import com.linker.tbook.utils.*
 import com.linker.tbook.view.base.BaseActivity
 
 class MainActivity : BaseActivity() {
 
-    // viewBinding
+    private val mainViewModel: MainViewModel by viewModels()
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
 
@@ -31,9 +34,6 @@ class MainActivity : BaseActivity() {
         // Navigation Graph를 사용해서 Bottom Navigation 설정
         binding.navBottom.setupWithNavController(navController)
 
-        // 아이콘에 색상 입히지 않고 아이콘 이미지 그대로 보여주기
-        //binding.navBottom.itemIconTintList = null
-
         // 최상위 화면을 제외하고는 BottomNavigation Bar 없애기
         setBottomNavigation()
     }
@@ -44,7 +44,9 @@ class MainActivity : BaseActivity() {
     }
 
     override fun observeViewModel() {
-
+        //observe(mainViewModel.mainLiveData, ::handleLoginResult)
+        //observeSnackBarMessages(mainViewModel.showSnackBar)
+        //observeToast(mainViewModel.showToast)
     }
 
     private fun setBottomNavigation() {
@@ -58,6 +60,14 @@ class MainActivity : BaseActivity() {
                 binding.navBottom.visibility = View.GONE
             }
         }
+    }
+
+    private fun observeSnackBarMessages(event: LiveData<SingleEvent<Any>>) {
+        //binding.root.setupSnackbar(this, event, Snackbar.LENGTH_LONG)
+    }
+
+    private fun observeToast(event: LiveData<SingleEvent<Any>>) {
+        binding.root.showToast(this, event, Snackbar.LENGTH_LONG)
     }
 
     override fun onDestroy() {

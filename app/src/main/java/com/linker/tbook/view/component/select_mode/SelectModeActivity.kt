@@ -3,7 +3,7 @@ package com.linker.tbook.view.component.select_mode
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.linker.tbook.MainActivity
+import com.linker.tbook.view.component.MainActivity
 import com.linker.tbook.R
 import com.linker.tbook.databinding.ActivitySelectModeBinding
 
