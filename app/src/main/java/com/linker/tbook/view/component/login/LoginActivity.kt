@@ -14,6 +14,7 @@ import com.linker.tbook.utils.*
 import com.linker.tbook.view.base.BaseActivity
 import com.linker.tbook.view.component.login.findPassword.FindPasswordActivity
 import com.linker.tbook.view.component.select_mode.SelectModeActivity
+import com.linker.tbook.view.component.sign_up.SignUpActivity
 
 class LoginActivity : BaseActivity() {
 
@@ -24,6 +25,8 @@ class LoginActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // 회원가입 버튼 선택 시
+        binding.textbtnGotoSignup.setOnClickListener { navigateToSignUpScreen() }
         // 비밀번호를 잊으셨나요?
         binding.textbtnGotoFindPassword.setOnClickListener(View.OnClickListener { navigateToFindPasswordScreen() })
         // 로그인 버튼 선택 시
@@ -58,11 +61,18 @@ class LoginActivity : BaseActivity() {
             }
         }
     }
+
     // 사용방식 선택 페이지로 이동
     private fun navigateToSelectModeScreen() {
         val selectModeActivity = Intent(this, SelectModeActivity::class.java)
         startActivity(selectModeActivity)
         finish()
+    }
+
+    // 회원가입 페이지로 이동
+    private fun navigateToSignUpScreen() {
+        val signUpActivity = Intent(this, SignUpActivity::class.java)
+        startActivity(signUpActivity)
     }
 
     // 비밀번호 찾기 페이지로 이동

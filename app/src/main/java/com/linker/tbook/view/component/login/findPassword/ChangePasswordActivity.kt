@@ -9,18 +9,16 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import com.linker.tbook.R
 import com.linker.tbook.databinding.ActivityChangePasswordBinding
+import com.linker.tbook.view.base.BaseActivity
 
 // 비밀번호 찾기 - 비밀번호 변경
-class ChangePasswordActivity : AppCompatActivity() {
+class ChangePasswordActivity : BaseActivity() {
     // ViewBinding Setting
     private var _binding: ActivityChangePasswordBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityChangePasswordBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
 
         // 뒤로가기 버튼 > 비밀번호 찾기 페이지 닫기
         binding.btnBack.setOnClickListener {
@@ -49,6 +47,15 @@ class ChangePasswordActivity : AppCompatActivity() {
             // 페이지 닫기
             finish()
         }
+    }
+
+    override fun initViewBinding() {
+        _binding = ActivityChangePasswordBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
+
+    override fun observeViewModel() {
+
     }
 
     override fun onDestroy() {

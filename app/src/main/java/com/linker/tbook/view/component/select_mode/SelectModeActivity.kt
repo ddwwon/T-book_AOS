@@ -3,6 +3,9 @@ package com.linker.tbook.view.component.select_mode
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.widget.Toast
 import com.linker.tbook.view.component.MainActivity
 import com.linker.tbook.R
 import com.linker.tbook.databinding.ActivitySelectModeBinding
@@ -47,7 +50,7 @@ class SelectModeActivity : BaseActivity() {
 
     }
 
-    // 로그인 페이지로 이동하고 사용방식 선택 페이지 닫기
+    // 사용방식 선택 페이지 닫고 로그인 페이지로 이동하기
     private fun backToLoginScreen() {
         val loginActivity = Intent(this, LoginActivity::class.java)
         startActivity(loginActivity)
@@ -88,5 +91,27 @@ class SelectModeActivity : BaseActivity() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    private var doubleBackToExit = false
+    // 이전 버튼 - 폰에 있는 이전 버튼
+    override fun onBackPressed() {
+        //super.onBackPressed()
+
+        if (doubleBackToExit) {
+            // 두 번 누르면 비밀번호 찾기 페이지 닫기
+            finish()
+        } else {
+            // 한 번 누르면 종료 Toast 안내
+            Toast.makeText(this, getString(R.string.toast_back_main_page), Toast.LENGTH_SHORT).show()
+            doubleBackToExit = true
+
+            runDelayed(1500L) {
+                doubleBackToExit = false
+            }
+        }
+    }
+    fun runDelayed(millis: Long, function: () -> Unit) {
+        Handler(Looper.getMainLooper()).postDelayed(function, millis)
     }
 }
