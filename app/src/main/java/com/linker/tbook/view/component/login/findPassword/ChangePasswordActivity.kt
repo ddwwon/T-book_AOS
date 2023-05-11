@@ -66,7 +66,7 @@ class ChangePasswordActivity : AppCompatActivity() {
             finish()
         } else {
             // 한 번 누르면 종료 Toast 안내
-            Toast.makeText(this, getString(R.string.toast_back_page), Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.toast_back_fp_page), Toast.LENGTH_SHORT).show()
             doubleBackToExit = true
 
             runDelayed(1500L) {

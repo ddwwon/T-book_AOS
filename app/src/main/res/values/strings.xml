@@ -6,6 +6,9 @@
     <string name="home">홈</string>
     <string name="myPage">마이페이지</string>
 
+    <!-- 메인 -->
+    <string name="toast_back_main_page">뒤로가기를 한 번 더 누르시면 앱이 종료됩니다.</string>
+
     <!-- 로그인 -->
     <string name="login">로그인</string>
     <string name="login_notice">트북이의 혜택과 정보를 얻으시려면\n로그인이 필요해요.</string>
@@ -34,7 +37,7 @@
     <string name="change_password">비밀번호 변경</string>
     <string name="restore_password">비밀번호 재설정</string>
     <string name="done_password">변경 완료</string>
-    <string name="toast_back_page">뒤로가기를 한 번 더 누르시면 비밀번호 찾기가 종료됩니다.</string>
+    <string name="toast_back_fp_page">뒤로가기를 한 번 더 누르시면 비밀번호 찾기가 종료됩니다.</string>
 
     <!-- 사용 방식 선택 -->
     <string name="use_option_notice">원하는 사용 방식을\n선택하세요.</string>
