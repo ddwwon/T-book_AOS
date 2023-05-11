@@ -1,4 +1,4 @@
-package com.linker.tbook.view.login.findPassword
+package com.linker.tbook.view.component.login.findPassword
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

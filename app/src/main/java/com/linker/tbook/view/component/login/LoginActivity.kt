@@ -1,13 +1,12 @@
-package com.linker.tbook.view.login
+package com.linker.tbook.view.component.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.linker.tbook.MainActivity
 import com.linker.tbook.databinding.ActivityLoginBinding
-import com.linker.tbook.view.login.findPassword.FindPasswordActivity
-import com.linker.tbook.view.select_mode.SelectModeActivity
+import com.linker.tbook.view.component.login.findPassword.FindPasswordActivity
+import com.linker.tbook.view.component.select_mode.SelectModeActivity
 
 class LoginActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.linker.tbook.view.home
+package com.linker.tbook.view.component.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

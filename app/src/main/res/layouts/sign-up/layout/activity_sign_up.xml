@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.sign_up.SignUpActivity">
+    tools:context=".view.component.sign_up.SignUpActivity">
 
     <!-- 이전 페이지 이동 버튼 -->
     <ImageButton

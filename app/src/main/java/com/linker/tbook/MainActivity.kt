@@ -6,9 +6,11 @@ import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.linker.tbook.R
 import com.linker.tbook.databinding.ActivityMainBinding
+import com.linker.tbook.view.base.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     // viewBinding
     private var _binding: ActivityMainBinding? = null
@@ -17,11 +19,9 @@ class MainActivity : AppCompatActivity() {
     // NavController
     private lateinit var navController: NavController
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
 
         // NavController
 //        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -38,11 +38,21 @@ class MainActivity : AppCompatActivity() {
         setBottomNavigation()
     }
 
+    override fun initViewBinding() {
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
+
+    override fun observeViewModel() {
+
+    }
+
     private fun setBottomNavigation() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
             if(destination.id == R.id.menu_home ||
                     destination.id == R.id.menu_recommend_result ||
-                    destination.id == R.id.menu_myPage) {
+                    destination.id == R.id.menu_myPage
+            ) {
                 binding.navBottom.visibility = View.VISIBLE
             } else {
                 binding.navBottom.visibility = View.GONE
