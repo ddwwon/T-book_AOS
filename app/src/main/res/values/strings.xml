@@ -6,6 +6,46 @@
     <string name="home">홈</string>
     <string name="myPage">마이페이지</string>
 
+    <!-- 메인 -->
+    <string name="toast_back_main_page">뒤로가기를 한 번 더 누르시면 앱이 종료됩니다.</string>
+
+    <!-- 로그인 -->
+    <string name="login">로그인</string>
+    <string name="login_notice">트북이의 혜택과 정보를 얻으시려면\n로그인이 필요해요.</string>
+    <string name="login_hint_email">email</string>
+    <string name="login_hint_password">password</string>
+    <string name="forget_password">비밀번호를 잊으셨나요?</string>
+    <string name="login_kakao">카카오 ID로 로그인하기</string>
+    <string name="login_google">구글 ID로 로그인하기</string>
+
+    <!-- 회원가입 -->
+    <string name="sign_up">회원가입</string>
+    <string name="sign_up_notice">트북이 서비스 이용을 위해\n고객님의 정보가 필요해요.</string>
+    <string name="sign_up_label_email">이메일</string>
+    <string name="sign_up_hint_email">abcd@email.com</string>
+    <string name="sign_up_label_password">비밀번호</string>
+    <string name="sign_up_label_password_confirm">비밀번호 확인</string>
+    <string name="sign_up_hint_password">영문 대소문자, 숫자, 특수문자를 조합하여\n8~16자로 입력해주세요.</string>
+    <string name="sign_up_label_name">이름</string>
+    <string name="sign_up_hint_name">홍길동</string>
+    <string name="sign_up_label_address">주소</string>
+    <string name="sign_up_label_phone">전화번호</string>
+    <string name="sign_up_hint_phone">010-0000-0000</string>
+
+    <!-- 비밀번호 찾기 -->
+    <string name="forget_password_notice">아래의 정보를 입력하면\n비밀번호를 재설정 할 수 있어요.</string>
+    <string name="change_password">비밀번호 변경</string>
+    <string name="restore_password">비밀번호 재설정</string>
+    <string name="done_password">변경 완료</string>
+    <string name="toast_back_fp_page">뒤로가기를 한 번 더 누르시면 비밀번호 찾기가 종료됩니다.</string>
+
+    <!-- 사용 방식 선택 -->
+    <string name="use_option_notice">원하는 사용 방식을\n선택하세요.</string>
+    <string name="use_option_ai">AI 추천 모드</string>
+    <string name="use_option_normal">일반 모드</string>
+    <string name="use_option_confirm">선택 완료</string>
+    <string name="use_option_change_notice">마이페이지 > 환경설정에서 변경 가능합니다</string>
+
     <!-- 추천 -->
     <string name="next">다음으로</string>
     <string-array name="question_list">
@@ -71,6 +111,7 @@
         <item>상관없음</item>
     </string-array>
     <string name="recommend_notebook">트북이의\n추천🎵</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
