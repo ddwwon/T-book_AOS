@@ -196,7 +196,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/view_line">
+        android:layout_below="@id/view_line"
+        android:layout_alignParentBottom="true">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_product_list"
@@ -207,7 +208,7 @@
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/item_product"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center_horizontal"/>
 
     </ScrollView>
 

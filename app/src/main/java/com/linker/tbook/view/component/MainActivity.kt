@@ -78,25 +78,25 @@ class MainActivity : BaseActivity() {
         _binding = null
     }
 
-    private var doubleBackToExit = false
-    // 이전 버튼 - 폰에 있는 이전 버튼
-    override fun onBackPressed() {
-        //super.onBackPressed()
-
-        if (doubleBackToExit) {
-            // 두 번 누르면 비밀번호 찾기 페이지 닫기
-            finish()
-        } else {
-            // 한 번 누르면 종료 Toast 안내
-            Toast.makeText(this, getString(R.string.toast_back_main_page), Toast.LENGTH_SHORT).show()
-            doubleBackToExit = true
-
-            runDelayed(1500L) {
-                doubleBackToExit = false
-            }
-        }
-    }
-    fun runDelayed(millis: Long, function: () -> Unit) {
-        Handler(Looper.getMainLooper()).postDelayed(function, millis)
-    }
+//    private var doubleBackToExit = false
+//    // 이전 버튼 - 폰에 있는 이전 버튼
+//    override fun onBackPressed() {
+//        //super.onBackPressed()
+//
+//        if (doubleBackToExit) {
+//            // 두 번 누르면 앱 종료
+//            finishAffinity()
+//        } else {
+//            // 한 번 누르면 종료 Toast 안내
+//            Toast.makeText(this, getString(R.string.toast_back_main_page), Toast.LENGTH_SHORT).show()
+//            doubleBackToExit = true
+//
+//            runDelayed(1500L) {
+//                doubleBackToExit = false
+//            }
+//        }
+//    }
+//    fun runDelayed(millis: Long, function: () -> Unit) {
+//        Handler(Looper.getMainLooper()).postDelayed(function, millis)
+//    }
 }
