@@ -31,6 +31,7 @@ android {
                     'src/main/res/layouts/sign-up',
                     'src/main/res/layouts/select-mode',
                     'src/main/res/layouts/home',
+                    'src/main/res/layouts/product-detail',
                     'src/main/res/layouts/my-page',
                     'src/main/res/layouts/recommend',
                     'src/main/res/layouts',

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexWrap
@@ -258,6 +259,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
 
     // 제품 아이템 선택
     private fun clickProductItem(position: Int) {
-
+        // 제품 상세 페이지로 이동
+        view?.findNavController()?.navigate(R.id.action_home_to_product_detail)
+        // 이동할 때 선택 정보 전달
     }
 }
