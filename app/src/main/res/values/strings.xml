@@ -46,6 +46,12 @@
     <string name="use_option_confirm">선택 완료</string>
     <string name="use_option_change_notice">마이페이지 > 환경설정에서 변경 가능합니다</string>
 
+    <!-- 일반 모드 화면 -->
+    <string name="filter_company">제조사</string>
+    <string name="filter_purpose">용도</string>
+    <string name="filter_weight">무게</string>
+    <string name="filter_price">가격대</string>
+
     <!-- 추천 -->
     <string name="next">다음으로</string>
     <string-array name="question_list">

@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.LayoutRes
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 
-abstract class BaseFragment<T: ViewDataBinding>(
+abstract class BaseFragment<T: ViewBinding>(
     private val bind: (View) -> T,
     @LayoutRes private val layoutId: Int) : Fragment(layoutId) {
 
