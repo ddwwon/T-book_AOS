@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexWrap
 import com.google.android.flexbox.FlexboxLayoutManager
@@ -14,6 +15,8 @@ import com.linker.tbook.databinding.FragmentHomeBinding
 import com.linker.tbook.view.base.BaseFragment
 import com.linker.tbook.view.component.home.homeRecycler.FilterOptionAdapter
 import com.linker.tbook.view.component.home.homeRecycler.FilterOptionData
+import com.linker.tbook.view.component.home.homeRecycler.ProductListAdapter
+import com.linker.tbook.view.component.home.homeRecycler.ProductListData
 
 class HomeFragment : BaseFragment<FragmentHomeBinding> (
     FragmentHomeBinding::bind, R.layout.fragment_home
@@ -32,6 +35,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
     // 가격대
     private lateinit var filterPriceItems: MutableList<FilterOptionData>
     private lateinit var filterPriceAdapter: FilterOptionAdapter
+
+    // 제품 리스트 RecyclerView
+    private lateinit var productListItems: MutableList<ProductListData>
+    private lateinit var productListAdapter: ProductListAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -67,6 +74,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
         addPriceOption(FilterOptionData("100~200만 원", false))
         addPriceOption(FilterOptionData("200만 원 이상", false))
 
+        // 임시 데이타 - 제품
+        addProductItem(ProductListData("https://github.com/ddwwon/T-book_AOS/assets/76805879/64169f61-b536-4535-96b1-c481a6c40cbc",
+            "DELL", "XPS 15"))
+        addProductItem(ProductListData("https://github.com/ddwwon/T-book_AOS/assets/76805879/1b7139a8-ce0f-40fa-8c2a-30581f25bdeb",
+            "ASUS", "ROG 제퍼러스"))
+        addProductItem(ProductListData("https://github.com/ddwwon/T-book_AOS/assets/76805879/64169f61-b536-4535-96b1-c481a6c40cbc",
+            "DELL", "XPS 15"))
 
         // 필터 옵션 선택창 열고 닫기 버튼
         binding.btnFilter.setOnClickListener { clickFilterOptionBtn() }
@@ -145,6 +159,19 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
             binding.recyclerviewFilterOfPrice.layoutManager = it
             binding.recyclerviewFilterOfPrice.adapter = filterPriceAdapter
         }
+
+        // 제품 리스트
+        productListAdapter = ProductListAdapter(
+            requireContext(),
+            onClickProduct = {
+                clickProductItem(it)
+            }
+        )
+        productListItems = mutableListOf<ProductListData>()
+        productListAdapter.items = productListItems
+        binding.recyclerviewProductList.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.recyclerviewProductList.adapter = productListAdapter
+        binding.recyclerviewProductList.isNestedScrollingEnabled = true
     }
 
     // 필터 옵션 추가 - 제조사
@@ -169,6 +196,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
     private fun addPriceOption(item: FilterOptionData) {
         filterPriceItems.add(item)
         filterPriceAdapter.notifyDataSetChanged()
+    }
+
+    // 제품 추가
+    private fun addProductItem(item: ProductListData) {
+        productListItems.add(item)
+        productListAdapter.notifyDataSetChanged()
     }
 
     // 필터 옵션 선택 시 - 제조사
@@ -221,5 +254,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
         else {
             binding.linearOpenFilter.visibility = View.GONE
         }
+    }
+
+    // 제품 아이템 선택
+    private fun clickProductItem(position: Int) {
+
     }
 }
