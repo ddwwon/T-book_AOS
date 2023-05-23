@@ -21,16 +21,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
 
     // 필터 Recyclerview
     // 제조사
-    private var filterCompanyItems = mutableListOf<FilterOptionData>()
+    private lateinit var filterCompanyItems: MutableList<FilterOptionData>
     private lateinit var filterCompanyAdapter: FilterOptionAdapter
     // 용도
-    private var filterPurposeItems = mutableListOf<FilterOptionData>()
+    private lateinit var filterPurposeItems: MutableList<FilterOptionData>
     private lateinit var filterPurposeAdapter: FilterOptionAdapter
     // 무게
-    private var filterWeightItems = mutableListOf<FilterOptionData>()
+    private lateinit var filterWeightItems: MutableList<FilterOptionData>
     private lateinit var filterWeightAdapter: FilterOptionAdapter
     // 가격대
-    private var filterPriceItems = mutableListOf<FilterOptionData>()
+    private lateinit var filterPriceItems: MutableList<FilterOptionData>
     private lateinit var filterPriceAdapter: FilterOptionAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -81,6 +81,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
                 selectCompanyOption(it)
             }
         )
+        filterCompanyItems = mutableListOf<FilterOptionData>()
         filterCompanyAdapter.items = filterCompanyItems
         FlexboxLayoutManager(requireContext()).apply {
             flexWrap = FlexWrap.WRAP // 다음 아이템의 크기가 남은 여유공간보다 큰 경우 자동으로 줄바꿈
@@ -98,6 +99,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
                 selectPurposeOption(it)
             }
         )
+        filterPurposeItems = mutableListOf<FilterOptionData>()
         filterPurposeAdapter.items = filterPurposeItems
         FlexboxLayoutManager(requireContext()).apply {
             flexWrap = FlexWrap.WRAP // 다음 아이템의 크기가 남은 여유공간보다 큰 경우 자동으로 줄바꿈
@@ -115,6 +117,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
                 selectWeightOption(it)
             }
         )
+        filterWeightItems = mutableListOf<FilterOptionData>()
         filterWeightAdapter.items = filterWeightItems
         FlexboxLayoutManager(requireContext()).apply {
             flexWrap = FlexWrap.WRAP // 다음 아이템의 크기가 남은 여유공간보다 큰 경우 자동으로 줄바꿈
@@ -132,6 +135,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
                 selectPriceOption(it)
             }
         )
+        filterPriceItems = mutableListOf<FilterOptionData>()
         filterPriceAdapter.items = filterPriceItems
         FlexboxLayoutManager(requireContext()).apply {
             flexWrap = FlexWrap.WRAP // 다음 아이템의 크기가 남은 여유공간보다 큰 경우 자동으로 줄바꿈

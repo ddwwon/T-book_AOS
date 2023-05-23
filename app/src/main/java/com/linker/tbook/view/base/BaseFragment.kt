@@ -26,11 +26,15 @@ abstract class BaseFragment<T: ViewBinding>(
         return binding.root
     }
 
-    override fun onDestroyView() {
+    override fun onDestroy() {
+        super.onDestroy()
         _binding = null
-        super.onDestroyView()
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
     fun showCustomToast(message: String) {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
     }
