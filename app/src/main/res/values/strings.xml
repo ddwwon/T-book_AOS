@@ -31,13 +31,14 @@
     <string name="sign_up_label_address">주소</string>
     <string name="sign_up_label_phone">전화번호</string>
     <string name="sign_up_hint_phone">010-0000-0000</string>
+    <string name="toast_back_signup_page">페이지를 벗어나면 회원가입이 취소됩니다.</string>
 
     <!-- 비밀번호 찾기 -->
     <string name="forget_password_notice">아래의 정보를 입력하면\n비밀번호를 재설정 할 수 있어요.</string>
     <string name="change_password">비밀번호 변경</string>
     <string name="restore_password">비밀번호 재설정</string>
     <string name="done_password">변경 완료</string>
-    <string name="toast_back_fp_page">뒤로가기를 한 번 더 누르시면 비밀번호 찾기가 종료됩니다.</string>
+    <string name="toast_back_fp_page">페이지를 벗어나면 비밀번호 찾기가 취소됩니다.</string>
 
     <!-- 사용 방식 선택 -->
     <string name="use_option_notice">원하는 사용 방식을\n선택하세요.</string>

@@ -1,13 +1,18 @@
 package com.linker.tbook.view.component
 
+import android.app.ActivityManager
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.snackbar.Snackbar
@@ -78,25 +83,21 @@ class MainActivity : BaseActivity() {
         _binding = null
     }
 
-//    private var doubleBackToExit = false
-//    // 이전 버튼 - 폰에 있는 이전 버튼
-//    override fun onBackPressed() {
-//        //super.onBackPressed()
-//
-//        if (doubleBackToExit) {
-//            // 두 번 누르면 앱 종료
-//            finishAffinity()
-//        } else {
-//            // 한 번 누르면 종료 Toast 안내
-//            Toast.makeText(this, getString(R.string.toast_back_main_page), Toast.LENGTH_SHORT).show()
-//            doubleBackToExit = true
-//
-//            runDelayed(1500L) {
-//                doubleBackToExit = false
-//            }
-//        }
-//    }
-//    fun runDelayed(millis: Long, function: () -> Unit) {
-//        Handler(Looper.getMainLooper()).postDelayed(function, millis)
-//    }
+    // 메인 화면(=하단바로 바로 들어가지는 페이지)들에서 이전 버튼 2번 누르면 앱 종료
+    var waitTime = 0L
+    override fun onBackPressed() {
+        if(navController.currentDestination?.id == R.id.menu_home ||
+            navController.currentDestination?.id == R.id.menu_recommend_result ||
+            navController.currentDestination?.id == R.id.menu_myPage) {
+            if (System.currentTimeMillis() - waitTime >= 1500) {
+                waitTime = System.currentTimeMillis()
+                Toast.makeText(this, getString(R.string.toast_back_main_page), Toast.LENGTH_SHORT).show()
+            } else {
+                finish() // 액티비티 종료
+            }
+        }
+        else{
+            super.onBackPressed()
+        }
+    }
 }
