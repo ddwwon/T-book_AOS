@@ -13,7 +13,8 @@
     <RelativeLayout
         android:id="@+id/relative_product_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
 
         <!-- 이전 페이지 이동 버튼 -->
         <ImageButton
@@ -60,7 +61,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/relative_product_header">
+        android:layout_below="@id/relative_product_header"
+        android:layout_above="@id/relative_buy_product"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,30 +136,31 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="22dp"
-                android:layout_marginBottom="25dp"
+                android:layout_marginBottom="20dp"
                 android:orientation="vertical">
 
                 <!-- 라벨 -->
                 <TextView
                     android:id="@+id/text_label_product_info"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_detail"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
 
-                <!-- CPU -->
-
-                <!-- 램 -->
-
-                <!-- 저장용량 -->
-
-                <!-- 해상도 -->
-
-                <!-- 그래픽 -->
-
-                <!-- 배터리 -->
-
-                <!-- 운영체제 -->
-
-                <!-- 무게 -->
+                <!-- CPU, 램, 저장용량, 해상도, 그래픽, 배터리, 운영체제, 무게 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_product_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_product_detail"
+                    android:layout_gravity="start"/>
 
             </LinearLayout>
 
@@ -164,21 +168,87 @@
 
     </ScrollView>
 
-    <!-- 구분선 -->
-    <View
-        android:id="@+id/view_line2"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@color/light_gray"
-        android:layout_above="@id/relative_buy_product"/>
-
     <!-- 구매 -->
     <RelativeLayout
         android:id="@+id/relative_buy_product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:paddingBottom="20dp"
+        android:background="@color/white"
         android:layout_alignParentBottom="true">
+
+        <!-- 구분선 -->
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/light_gray" />
+
+        <!-- 날짜 -->
+        <TextView
+            android:id="@+id/text_date_for_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:text="03/29 최저가"
+            android:textColor="@color/sign_label_gray"
+            android:textSize="10sp"
+            android:layout_below="@id/view_line2"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- 가격 -->
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:layout_marginTop="4dp"
+            android:text="1,341,350 원"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@id/text_date_for_price"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- 장바구니, 구매하기 버튼 -->
+        <LinearLayout
+            android:id="@+id/linear_buy_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:layout_below="@id/text_price"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <!-- 장바구니 버튼 -->
+            <Button
+                android:id="@+id/btn_add_shopping_cart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingVertical="14dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/mini_black_solid_button"
+                android:text="@string/product_shopping_cart"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <!-- 구매하기 버튼 -->
+            <Button
+                android:id="@+id/btn_buy_product"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingVertical="14dp"
+                android:background="@drawable/mini_green_solid_button"
+                android:text="@string/product_buy"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 

@@ -129,6 +129,8 @@
     <string name="product_battery">배터리</string>
     <string name="product_os">운영체제</string>
     <string name="product_weight">무게</string>
+    <string name="product_shopping_cart">장바구니 담기</string>
+    <string name="product_buy">구매하기</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 제품 상세 > 제품 정보 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <!-- 상세 정보 설명 -->
+
+
+    <LinearLayout
+        android:id="@+id/linear_product_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/linear_product_label"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 라벨 -->
+            <TextView
+                android:id="@+id/text_product_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CPU"
+                android:textColor="@color/sign_label_gray"
+                android:textSize="12sp" />
+
+            <!-- 상세 정보 설명 버튼 -->
+            <ImageButton
+                android:id="@+id/btn_view_info"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/ic_detail_info"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent" />
+
+        </LinearLayout>
+
+        <!-- 상세 정보 내용 -->
+        <TextView
+            android:id="@+id/text_product_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="코어i5-1235U (1.3GHz)"
+            android:textColor="@color/sign_label_gray"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+</FrameLayout>
