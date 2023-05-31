@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.MyPageFragment">
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/btn_back"
@@ -98,7 +97,7 @@
                 android:text="@string/address_setting"
                 android:textSize="13sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/middle_gray"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -121,7 +120,7 @@
                 android:text="@string/order_list"
                 android:textSize="13sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/middle_gray"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -130,7 +129,7 @@
     <View
         android:id="@+id/line"
         android:layout_width="match_parent"
-        android:layout_height="6dp"
+        android:layout_height="3dp"
         android:layout_below="@id/address_order_group"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -141,7 +140,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="20dp"
+        android:paddingHorizontal="30dp"
         android:layout_below="@id/line">
 
         <!-- 공지 사항 -->
@@ -163,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/notice"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/middle_gray"
                 android:textSize="13sp"/>
 
             <View
@@ -202,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/customer_center"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/middle_gray"
                 android:textSize="13sp"/>
 
             <View
@@ -241,7 +240,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/setting"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/middle_gray"
                 android:textSize="13sp"/>
 
             <View
@@ -280,7 +279,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/change_password"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/middle_gray"
                 android:textSize="13sp"/>
 
             <View
@@ -319,7 +318,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/exit_member"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/middle_gray"
                 android:textSize="13sp"/>
 
             <View
@@ -358,7 +357,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/version"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/middle_gray"
                 android:textSize="13sp"/>
 
             <View

@@ -1,4 +1,4 @@
-package com.linker.tbook
+package com.linker.tbook.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.linker.tbook.R
 import com.linker.tbook.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +42,8 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{_, destination, _ ->
             if(destination.id == R.id.menu_home ||
                     destination.id == R.id.menu_recommend_result ||
-                    destination.id == R.id.menu_myPage) {
+                    destination.id == R.id.menu_myPage
+            ) {
                 binding.navBottom.visibility = View.VISIBLE
             } else {
                 binding.navBottom.visibility = View.GONE
