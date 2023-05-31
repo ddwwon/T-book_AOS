@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.component.my_page.MyPageFragment">
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatButton
@@ -45,7 +47,7 @@
         android:layout_below="@id/btn_back"
         android:layout_toRightOf="@id/image_profile"
         android:layout_marginTop="50dp"/>
-    
+
     <TextView
         android:id="@+id/text_email"
         android:layout_width="wrap_content"
@@ -155,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_notice"/>
-            
+
             <TextView
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"

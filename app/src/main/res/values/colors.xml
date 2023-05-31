@@ -4,6 +4,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="light_gray">#F2F2F2</color>
+    <color name="hint_gray">#7D7D7D</color>
+    <color name="sign_input_line">#F0F0F0</color>
+    <color name="sign_label_gray">#767676</color>
+    <color name="select_mode_gray">#9C9C9C</color>
+    <color name="bottom_menu_gray">#D8D8D8</color>
+    <color name="normal_gray">#CCCCCC</color>
     <color name="middle_gray">#989898</color>
     <color name="transparent">#00000000</color>
+    <color name="kakao_yellow">#FBFF36</color>
+    <color name="google_navy">#0F006F</color>
 </resources>

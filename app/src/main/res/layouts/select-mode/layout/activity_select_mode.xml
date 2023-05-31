@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 사용방식 선택 - AI 추천 모드, 일반 모드 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.component.select_mode.SelectModeActivity">
+
+    <!-- 이전 페이지 이동 버튼 -->
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_back"
+        android:background="@color/transparent"/>
+
+    <!-- 모드 선택 안내 -->
+    <TextView
+        android:id="@+id/text_select_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="34dp"
+        android:text="@string/use_option_notice"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_below="@id/btn_back"/>
+
+    <!-- 위아래 공백 균형을 위해 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <!-- AI 추천 모드 버튼 -->
+        <Button
+            android:id="@+id/btn_recommend_ai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="27dp"
+            android:paddingVertical="30dp"
+            android:background="@drawable/green_solid_button"
+            android:text="@string/use_option_ai"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <!-- 일반 모드 버튼 -->
+        <Button
+            android:id="@+id/btn_recommend_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginHorizontal="27dp"
+            android:paddingVertical="30dp"
+            android:background="@drawable/gray_border_button"
+            android:text="@string/use_option_normal"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/select_mode_gray" />
+
+    </LinearLayout>
+
+    <!-- 모드 선택 변경 방법 안내 -->
+    <TextView
+        android:id="@+id/text_notice_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/use_option_change_notice"
+        android:textColor="@color/normal_gray"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:layout_above="@id/btn_select_done"/>
+
+    <!-- 선택 완료 버튼 -->
+    <Button
+        android:id="@+id/btn_select_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="27dp"
+        android:layout_marginBottom="45dp"
+        android:paddingVertical="15dp"
+        android:background="@drawable/green_solid_button"
+        android:text="@string/use_option_confirm"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

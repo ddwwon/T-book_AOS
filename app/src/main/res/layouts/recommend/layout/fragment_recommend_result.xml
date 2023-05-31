@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.component.recommend.RecommendResultFragment">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@id/btn_back"
@@ -38,7 +40,7 @@
     slider scroll time in sec is used to specify scrolling time in seconds
 -->
 
-    <com.google.android.material.slider.Slider
+    <!--<com.google.android.material.slider.Slider
         android:id="@+id/image_slider"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -54,6 +56,6 @@
         app:sliderIndicatorRadius="2dp"
         app:sliderIndicatorSelectedColor="#5A5A5A"
         app:sliderIndicatorUnselectedColor="#FFF"
-        app:sliderScrollTimeInSec="1" />
+        app:sliderScrollTimeInSec="1" />-->
 
 </RelativeLayout>
