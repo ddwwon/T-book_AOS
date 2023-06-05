@@ -11,6 +11,7 @@
     <color name="select_mode_gray">#9C9C9C</color>
     <color name="bottom_menu_gray">#D8D8D8</color>
     <color name="normal_gray">#CCCCCC</color>
+    <color name="detail_info_gray">#B3EDEDED</color>
     <color name="transparent">#00000000</color>
     <color name="kakao_yellow">#FBFF36</color>
     <color name="google_navy">#0F006F</color>

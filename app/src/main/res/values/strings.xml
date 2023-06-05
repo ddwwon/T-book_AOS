@@ -132,6 +132,15 @@
     <string name="product_shopping_cart">장바구니 담기</string>
     <string name="product_buy">구매하기</string>
 
+    <string name="product_cpu_info">CPU는 노트북의 성능과 작업 속도를 결정하는 중요한 요소입니다.</string>
+    <string name="product_ram_info">램(RAM)은 컴퓨터가 동시에 실행할 수 있는 프로그램과 데이터의 양을 결정합니다.</string>
+    <string name="product_storage_info">저장용량은 노트북에 저장할 수 있는 파일, 문서, 앱 등의 데이터 양을 결정합니다.</string>
+    <string name="product_resolution_info">해상도는 디스플레이의 화질과 선명도를 결정하는 요소입니다.</string>
+    <string name="product_graphic_info">그래픽은 시각적인 콘텐츠, 게임, 동영상 편집 등의 그래픽 처리에 관여합니다.</string>
+    <string name="product_battery_info">배터리 수명과 용량은 이동성과 사용시간을 결정하는 요소입니다.</string>
+    <string name="product_os_info">운영체제는 컴퓨터의 기능과 사용 편의성을 결정하는 핵심 소프트웨어입니다.</string>
+    <string name="product_weight_info">무게는 휴대성과 이동성을 결정하는 요소입니다. 일반적으로 1.5kg 이하면 가벼운 편입니다.</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

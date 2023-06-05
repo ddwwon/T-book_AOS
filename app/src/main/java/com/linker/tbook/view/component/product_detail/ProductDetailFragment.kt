@@ -41,14 +41,14 @@ class ProductDetailFragment : BaseFragment<FragmentProductDetailBinding>(
 
         // 제품 상세 정보
         // 샘플 데이터
-        addProductDetail(ProductDetailData("CPU", "코어i5-1235U (1.3GHz)", ""))
-        addProductDetail(ProductDetailData("램", "LPDDR4X 16gb 4266MHz", ""))
-        addProductDetail(ProductDetailData("저장용량", "500GB", ""))
-        addProductDetail(ProductDetailData("해상도", "1920 X 1080(FHD) 250nit", ""))
-        addProductDetail(ProductDetailData("그래픽", "내장그래픽(Iris XE)", ""))
-        addProductDetail(ProductDetailData("배터리", "80wh", ""))
-        addProductDetail(ProductDetailData("운영체제", "FreeDOS", ""))
-        addProductDetail(ProductDetailData("무게","1.14kg", ""))
+        addProductDetail(ProductDetailData("CPU", "코어i5-1235U (1.3GHz)", getString(R.string.product_cpu_info)))
+        addProductDetail(ProductDetailData("램", "LPDDR4X 16gb 4266MHz", getString(R.string.product_ram_info)))
+        addProductDetail(ProductDetailData("저장용량", "500GB", getString(R.string.product_storage_info)))
+        addProductDetail(ProductDetailData("해상도", "1920 X 1080(FHD) 250nit", getString(R.string.product_resolution_info)))
+        addProductDetail(ProductDetailData("그래픽", "내장그래픽(Iris XE)", getString(R.string.product_graphic_info)))
+        addProductDetail(ProductDetailData("배터리", "80wh", getString(R.string.product_battery_info)))
+        addProductDetail(ProductDetailData("운영체제", "FreeDOS", getString(R.string.product_os_info)))
+        addProductDetail(ProductDetailData("무게","1.14kg", getString(R.string.product_weight_info)))
 
         // 제품 가격 정보
 
