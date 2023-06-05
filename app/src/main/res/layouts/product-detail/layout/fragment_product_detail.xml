@@ -58,7 +58,7 @@
     </RelativeLayout>
 
     <!-- 제품 정보 영역 스크롤 -->
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/relative_product_header"
@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="22dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="15dp"
                 android:orientation="vertical">
 
                 <!-- 라벨 -->
@@ -157,6 +157,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
                     android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:listitem="@layout/item_product_detail"
@@ -166,7 +167,7 @@
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <!-- 구매 -->
     <RelativeLayout
