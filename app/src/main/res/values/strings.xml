@@ -131,6 +131,8 @@
     <string name="product_weight">무게</string>
     <string name="product_shopping_cart">장바구니 담기</string>
     <string name="product_buy">구매하기</string>
+    <string name="select_color">색상 선택하기</string>
+    <string name="select_count">구매 수량 선택</string>
 
     <string name="product_cpu_info">CPU는 노트북의 성능과 작업 속도를 결정하는 중요한 요소입니다.</string>
     <string name="product_ram_info">램(RAM)은 컴퓨터가 동시에 실행할 수 있는 프로그램과 데이터의 양을 결정합니다.</string>

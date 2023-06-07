@@ -11,6 +11,7 @@ import com.linker.tbook.utils.ImageLoader
 import com.linker.tbook.view.base.BaseFragment
 import com.linker.tbook.view.component.product_detail.productDetailRecycler.ProductDetailAdapter
 import com.linker.tbook.view.component.product_detail.productDetailRecycler.ProductDetailData
+import com.linker.tbook.view.component.product_detail.productOption.ProductOptionBottomSheet
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -53,6 +54,8 @@ class ProductDetailFragment : BaseFragment<FragmentProductDetailBinding>(
         // 제품 가격 정보
 
         // 장바구니, 구매하기 버튼
+        binding.btnBuyProduct.setOnClickListener { openSelectOption() }
+        binding.btnAddShoppingCart.setOnClickListener { openSelectOption() }
     }
 
     // RecyclerView 세팅
@@ -93,5 +96,8 @@ class ProductDetailFragment : BaseFragment<FragmentProductDetailBinding>(
     // 제품 가격 정보 세팅
 
     // 장바구니, 구매하기 bottomSheet
-
+    private fun openSelectOption() {
+        val bottomSheet = ProductOptionBottomSheet()
+        bottomSheet.show(requireActivity().supportFragmentManager, bottomSheet.tag)
+    }
 }
