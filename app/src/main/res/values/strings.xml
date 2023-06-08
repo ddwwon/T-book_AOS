@@ -31,13 +31,14 @@
     <string name="sign_up_label_address">주소</string>
     <string name="sign_up_label_phone">전화번호</string>
     <string name="sign_up_hint_phone">010-0000-0000</string>
+    <string name="toast_back_signup_page">페이지를 벗어나면 회원가입이 취소됩니다.</string>
 
     <!-- 비밀번호 찾기 -->
     <string name="forget_password_notice">아래의 정보를 입력하면\n비밀번호를 재설정 할 수 있어요.</string>
     <string name="change_password">비밀번호 변경</string>
     <string name="restore_password">비밀번호 재설정</string>
     <string name="done_password">변경 완료</string>
-    <string name="toast_back_fp_page">뒤로가기를 한 번 더 누르시면 비밀번호 찾기가 종료됩니다.</string>
+    <string name="toast_back_fp_page">페이지를 벗어나면 비밀번호 찾기가 취소됩니다.</string>
 
     <!-- 사용 방식 선택 -->
     <string name="use_option_notice">원하는 사용 방식을\n선택하세요.</string>
@@ -45,6 +46,12 @@
     <string name="use_option_normal">일반 모드</string>
     <string name="use_option_confirm">선택 완료</string>
     <string name="use_option_change_notice">마이페이지 > 환경설정에서 변경 가능합니다</string>
+
+    <!-- 일반 모드 화면 -->
+    <string name="filter_company">제조사</string>
+    <string name="filter_purpose">용도</string>
+    <string name="filter_weight">무게</string>
+    <string name="filter_price">가격대</string>
 
     <!-- 추천 -->
     <string name="next">다음으로</string>
@@ -111,6 +118,31 @@
         <item>상관없음</item>
     </string-array>
     <string name="recommend_notebook">트북이의\n추천🎵</string>
+
+    <!-- 제품 상세 -->
+    <string name="product_detail">제품 정보</string>
+    <string name="product_cpu">CPU</string>
+    <string name="product_ram">램</string>
+    <string name="product_storage">저장용량</string>
+    <string name="product_resolution">해상도</string>
+    <string name="product_graphic">그래픽</string>
+    <string name="product_battery">배터리</string>
+    <string name="product_os">운영체제</string>
+    <string name="product_weight">무게</string>
+    <string name="product_shopping_cart">장바구니 담기</string>
+    <string name="product_buy">구매하기</string>
+    <string name="select_color">색상 선택하기</string>
+    <string name="select_count">구매 수량 선택</string>
+
+    <string name="product_cpu_info">CPU는 노트북의 성능과 작업 속도를 결정하는 중요한 요소입니다.</string>
+    <string name="product_ram_info">램(RAM)은 컴퓨터가 동시에 실행할 수 있는 프로그램과 데이터의 양을 결정합니다.</string>
+    <string name="product_storage_info">저장용량은 노트북에 저장할 수 있는 파일, 문서, 앱 등의 데이터 양을 결정합니다.</string>
+    <string name="product_resolution_info">해상도는 디스플레이의 화질과 선명도를 결정하는 요소입니다.</string>
+    <string name="product_graphic_info">그래픽은 시각적인 콘텐츠, 게임, 동영상 편집 등의 그래픽 처리에 관여합니다.</string>
+    <string name="product_battery_info">배터리 수명과 용량은 이동성과 사용시간을 결정하는 요소입니다.</string>
+    <string name="product_os_info">운영체제는 컴퓨터의 기능과 사용 편의성을 결정하는 핵심 소프트웨어입니다.</string>
+    <string name="product_weight_info">무게는 휴대성과 이동성을 결정하는 요소입니다. 일반적으로 1.5kg 이하면 가벼운 편입니다.</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
