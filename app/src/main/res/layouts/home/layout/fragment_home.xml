@@ -1,14 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- 일반 모드 쇼핑 페이지 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.component.home.HomeFragment">
+    tools:context=".view.component.home.HomeFragment"
+    android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- 헤더 메뉴 -->
+    <RelativeLayout
+        android:id="@+id/relative_home_header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/home" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <!-- 앱 로고 -->
+        <ImageView
+            android:id="@+id/image_tbook_logo"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginStart="25dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_tbook_logo"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <!-- 필터 버튼 -->
+        <ImageButton
+            android:id="@+id/btn_filter"
+            android:layout_width="29dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginHorizontal="8dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_filter"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_shopping_cart"/>
+
+        <!-- 장바구니 -->
+        <ImageButton
+            android:id="@+id/btn_shopping_cart"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginRight="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_shopping_cart"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <!-- 검색 Filter -->
+    <LinearLayout
+        android:id="@+id/linear_open_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:layout_below="@id/relative_home_header"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <!-- 제조사 -->
+        <LinearLayout
+            android:id="@+id/linear_filter_of_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_filter_of_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/filter_company"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <!-- 아이템이 수평으로 배열되고,
+            갯수에 상관없이 가로 너비가 다 채워지면 줄바꿈 하도록
+            FlexboxLayoutManager 사용
+            FlexboxLayoutManager는 xml에서 할 수 없고 kotlin 코드에서 지정-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_filter_of_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_filter_option" />
+
+        </LinearLayout>
+
+        <!-- 용도 -->
+        <LinearLayout
+            android:id="@+id/linear_filter_of_purpose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="28dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_filter_of_purpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/filter_purpose"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_filter_of_purpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_filter_option" />
+
+        </LinearLayout>
+
+        <!-- 무게 -->
+        <LinearLayout
+            android:id="@+id/linear_filter_of_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="28dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_filter_of_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/filter_weight"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_filter_of_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_filter_option" />
+
+        </LinearLayout>
+
+        <!-- 가격 -->
+        <LinearLayout
+            android:id="@+id/linear_filter_of_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="28dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_filter_of_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/filter_price"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_filter_of_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_filter_option" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 구분선 -->
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/light_gray"
+        android:layout_below="@id/linear_open_filter"/>
+
+    <!-- 제품 리스트  -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_line"
+        android:layout_alignParentBottom="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_product_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_product"
+            android:layout_gravity="center_horizontal"/>
+
+    </ScrollView>
+
+</RelativeLayout>

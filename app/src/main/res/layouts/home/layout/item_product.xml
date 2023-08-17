@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 제품 리스트 아이템 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginHorizontal="15dp"
+    android:orientation="vertical">
+
+    <!-- 제품 이미지 -->
+    <ImageView
+        android:id="@+id/image_product"
+        android:layout_width="153dp"
+        android:layout_height="176dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+        android:background="@drawable/radius_for_image"/>
+    
+    <!-- 제품 정보 -->
+    <LinearLayout
+        android:id="@+id/linear_product_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 제조사 -->
+        <TextView
+            android:id="@+id/text_product_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <!-- 제품명 -->
+        <TextView
+            android:id="@+id/text_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</LinearLayout>
