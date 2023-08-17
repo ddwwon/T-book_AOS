@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@id/btn_back"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/ic_back"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/order_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_pay"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"/>
+
+    <!-- 주문자 정보 -->
+    <TextView
+        android:id="@+id/order_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_info"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/order_pay"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/name_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_number"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/order_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"/>
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="하도원"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@id/name_number"
+        android:layout_below="@id/order_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="010-1234-1234"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/order_info"
+        android:layout_toRightOf="@id/name"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/name_number"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/address_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="경남 진주시 진주대로 501 30동 313호"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/name_number"
+        android:layout_toRightOf="@id/address"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <View
+        android:id="@+id/div_line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/light_gray"
+        android:layout_below="@id/address"
+        android:layout_marginVertical="20dp" />
+
+    <!-- 주문 상품 -->
+    <TextView
+        android:id="@+id/order_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_product"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/div_line1"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/product_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_count"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/div_line1"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_pay_product_name"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/order_product"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/product_count2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_count"
+        android:layout_toRightOf="@id/product_name"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/order_product"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"/>
+
+    <View
+        android:id="@+id/div_line2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/light_gray"
+        android:layout_below="@id/product_count2"
+        android:layout_marginVertical="20dp" />
+
+    <!-- 결제 금액 -->
+    <TextView
+        android:id="@+id/pay_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_amount"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/div_line2"
+        android:layout_marginLeft="20dp"/>
+
+</RelativeLayout>

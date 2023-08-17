@@ -166,6 +166,22 @@
     <string name="delivery_fee_amount">총 배송비</string>
     <string name="buy">구매하기</string>
 
+    <!-- 주문 및 결제 -->
+    <string name="order_pay">주문 / 결제</string>
+    <string name="order_info">주문자 정보</string>
+    <string name="name_number">성명 · 연락처</string>
+    <string name="address">주소</string>
+    <string name="order_product">주문 상품</string>
+    <string name="pay_amount">결제 금액</string>
+    <string name="total_product_amount">총 상품 금액</string>
+    <string name="total_delivery_fee">총 배송비</string>
+    <string name="total_pay_amount">총 상품 금액</string>
+    <string name="pay_method">결제 수단</string>
+    <string name="general_pay">일반 결제</string>
+    <string name="pay">결제하기</string>
+    <string name="product_count">2개</string>
+    <string name="order_pay_product_name">LG전자 2022 그램15(12세대) </string>
+
     <!-- 주문 목록-->
     <string name="tracking_delivery">배송 조회</string>
 
