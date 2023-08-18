@@ -85,6 +85,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
 
         // 필터 옵션 선택창 열고 닫기 버튼
         binding.btnFilter.setOnClickListener { clickFilterOptionBtn() }
+
+        // 장바구니로 이동
+        binding.btnShoppingCart.setOnClickListener{
+            clickCart()
+        }
     }
 
     // recyclerview 세팅
@@ -262,5 +267,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding> (
         // 제품 상세 페이지로 이동
         view?.findNavController()?.navigate(R.id.action_home_to_product_detail)
         // 이동할 때 선택 정보 전달
+    }
+
+    // 장바구니 클릭
+    private fun clickCart() {
+        // 장바구니로 이동
+        view?.findNavController()?.navigate(R.id.action_menu_home_to_cartFragment)
     }
 }

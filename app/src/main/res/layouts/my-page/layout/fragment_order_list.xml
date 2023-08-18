@@ -23,14 +23,21 @@
         android:textColor="@color/black"
         android:layout_marginTop="40dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_order_list_item"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/order_list_item"
-        android:layout_below="@id/order_list"
-        android:paddingHorizontal="40dp"
-        android:paddingVertical="20dp"
-        />
+        android:layout_height="650dp"
+        android:layout_below="@id/order_list">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_order_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/order_list_item"
+            android:layout_below="@id/order_list"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="20dp"
+            />
+
+    </ScrollView>
 
 </RelativeLayout>

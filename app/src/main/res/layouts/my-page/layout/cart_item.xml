@@ -2,7 +2,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp">
 
     <View
         android:id="@+id/div_line"
@@ -13,8 +14,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_check"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
         android:background="@drawable/ic_check"
         android:layout_below="@id/div_line"
         />
@@ -37,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/notebook"
+        android:scaleType="centerCrop"
         android:layout_below="@id/btn_check"/>
 
     <TextView
@@ -93,6 +95,7 @@
             android:textSize="15sp"/>
 
         <TextView
+            android:id="@+id/product_count"
             android:layout_width="48dp"
             android:layout_height="24dp"
             android:background="@drawable/gray_line_layout"

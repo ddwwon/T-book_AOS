@@ -8,4 +8,5 @@ abstract class BaseViewModel : ViewModel() {
      */
     //@Inject
     //lateinit var errorManager: ErrorManager
+
 }

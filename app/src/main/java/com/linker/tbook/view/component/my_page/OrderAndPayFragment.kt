@@ -5,56 +5,57 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
+import androidx.navigation.findNavController
 import com.linker.tbook.R
+import com.linker.tbook.databinding.FragmentOrderAndPayBinding
+import com.linker.tbook.view.base.BaseFragment
+import com.linker.tbook.view.base.BaseViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class OrderAndPayFragment : BaseFragment<FragmentOrderAndPayBinding> (
+    FragmentOrderAndPayBinding::bind, R.layout.fragment_order_and_pay
+) {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [OrderAndPayFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class OrderAndPayFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    // 선택한 결제 수단 저장 - 카카오페이 = 0, 일반 결제 = 1
+    var payMethodNum = 0
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // 뒤로 가기 버튼 클릭
+        binding.btnBack.setOnClickListener {
+            goBack()
+        }
+
+        // 결제 수단 선택
+        binding.choicePayMethod.setOnClickListener {
+            onRadioButtonClicked(view)
+        }
+
+        // 결제하기 버튼 클릭
+        binding.btnBuy.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_orderAndPayFragment_to_deliveryTrackingFragment)
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_order_and_pay, container, false)
-    }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment OrderAndPayFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            OrderAndPayFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    // 결제 수단 선택
+    private fun onRadioButtonClicked(view: View) {
+        if(view is RadioButton) {
+            val checked = view.isChecked
+
+            when(view.getId()) {
+                R.id.kakao_pay ->
+                    if(checked) {
+                        showCustomToast("카카오페이가 실행됩니다.")
+                        payMethodNum = 0
+                    }
+                R.id.genaral_pay ->
+                    if(checked) {
+                        showCustomToast("일반 결제가 선택되었습니다.")
+                        payMethodNum = 1
+                    }
             }
+        }
     }
 }

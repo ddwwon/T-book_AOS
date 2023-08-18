@@ -181,9 +181,18 @@
     <string name="pay">결제하기</string>
     <string name="product_count">2개</string>
     <string name="order_pay_product_name">LG전자 2022 그램15(12세대) </string>
-
-    <!-- 주문 목록-->
+    
+    <!-- 배송 조회 -->
     <string name="tracking_delivery">배송 조회</string>
+    <string name="will_delivery">배송 준비 중</string>
+    <string name="delivering">배송 중</string>
+    <string name="delivered">배송 완료</string>
+    <string name="order_date">2020.01.01 주문</string>
+    <string name="expected_delivery_date">4/3(토) 도착 예정</string>
+    <string name="invoice_num">운송장 번호</string>
+    <string name="delivery_company">배송 업체</string>
+    <string name="delivery_address">배송 주소</string>
+    <string name="delivery_worker">배송원</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

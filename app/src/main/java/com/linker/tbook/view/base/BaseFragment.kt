@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<T: ViewBinding>(
@@ -37,6 +38,10 @@ abstract class BaseFragment<T: ViewBinding>(
     }
     fun showCustomToast(message: String) {
         Toast.makeText(activity, message, Toast.LENGTH_SHORT).show()
+    }
+
+    fun goBack() {
+        findNavController().popBackStack()
     }
 
 }

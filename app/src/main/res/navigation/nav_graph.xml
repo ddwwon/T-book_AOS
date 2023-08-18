@@ -15,13 +15,23 @@
         <action
             android:id="@+id/action_home_to_product_detail"
             app:destination="@id/product_detail"/>
+        <action
+            android:id="@+id/action_menu_home_to_cartFragment"
+            app:destination="@id/cartFragment" />
     </fragment>
 
     <fragment
         android:id="@id/menu_myPage"
         android:name="com.linker.tbook.view.component.my_page.MyPageFragment"
         android:label="fragment_my_page"
-        tools:layout="@layout/fragment_my_page" />
+        tools:layout="@layout/fragment_my_page" >
+        <action
+            android:id="@+id/action_menu_myPage_to_deliveryTrackingFragment"
+            app:destination="@id/deliveryTrackingFragment" />
+        <action
+            android:id="@+id/action_menu_myPage_to_orderListFragment"
+            app:destination="@id/orderListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menu_recommend"
         android:name="com.linker.tbook.view.component.recommend.RecommendFragment"
@@ -37,6 +47,35 @@
         android:id="@+id/product_detail"
         android:name="com.linker.tbook.view.component.product_detail.ProductDetailFragment"
         android:label="ProductDetailFragment"
-        tools:layout="@layout/fragment_product_detail"/>
+        tools:layout="@layout/fragment_product_detail">
+        <action
+            android:id="@+id/action_product_detail_to_orderAndPayFragment"
+            app:destination="@id/orderAndPayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.linker.tbook.view.component.my_page.CartFragment"
+        android:label="CartFragment" >
+        <action
+            android:id="@+id/action_cartFragment_to_orderAndPayFragment"
+            app:destination="@id/orderAndPayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deliveryTrackingFragment"
+        android:name="com.linker.tbook.view.component.my_page.DeliveryTrackingFragment"
+        android:label="DeliveryTrackingFragment" />
+    <fragment
+        android:id="@+id/orderAndPayFragment"
+        android:name="com.linker.tbook.view.component.my_page.OrderAndPayFragment"
+        android:label="OrderAndPayFragment" >
+        <action
+            android:id="@+id/action_orderAndPayFragment_to_deliveryTrackingFragment"
+            app:destination="@id/deliveryTrackingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderListFragment"
+        android:name="com.linker.tbook.view.component.my_page.OrderListFragment"
+        android:label="OrderListFragment" />
+
 
 </navigation>
