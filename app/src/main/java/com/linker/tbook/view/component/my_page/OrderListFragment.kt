@@ -1,6 +1,7 @@
 package com.linker.tbook.view.component.my_page
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -56,6 +57,7 @@ class OrderListFragment : BaseFragment<FragmentOrderListBinding>(
             requireContext(),
             onClick = {
                 // 배송 조회 클릭
+                Log.d("msg", "click")
                 clickDeliveryTracking(it)
             }
         )
@@ -74,6 +76,7 @@ class OrderListFragment : BaseFragment<FragmentOrderListBinding>(
     // 배송 조회 클릭
     private fun clickDeliveryTracking(position: Int) {
         // 해당 아이템의 배송 조회 화면으로 이동
+        Log.d("msg", "workrkwowkrwork")
         view?.findNavController()?.navigate(R.id.action_menu_myPage_to_deliveryTrackingFragment)
     }
 }

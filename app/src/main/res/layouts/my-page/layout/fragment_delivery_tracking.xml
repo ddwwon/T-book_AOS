@@ -132,7 +132,7 @@
         android:layout_marginVertical="10dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_cart_item"
+            android:id="@+id/recycler_delivery_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/delivery_list_item" />
