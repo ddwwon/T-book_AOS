@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 필터 선택 아이템 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="3dp"
+    android:layout_marginVertical="4dp"
+    android:id="@+id/linear_filter_option"
+    android:background="@drawable/green_solid_filter">
+
+    <TextView
+        android:id="@+id/text_filter_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="13dp"
+        android:paddingVertical="5dp"
+        android:text="SAMSUNG"
+        android:textColor="@color/white"
+        android:textSize="13sp"/>
+
+</LinearLayout>

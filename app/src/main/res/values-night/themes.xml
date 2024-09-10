@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Tbook" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Tbook" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/main_color</item>
         <item name="colorPrimaryVariant">@color/main_color</item>
@@ -10,7 +10,14 @@
         <item name="colorSecondaryVariant">@color/main_color</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!--<item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
         <!-- Customize your theme here. -->
+
+        <!-- 배경색 -->
+        <item name="android:windowBackground">@color/white</item>
+        <!-- 상태바 아이콘색 - true: 어둡게-->
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- 상태바 색상 - 투명하게 해둠 -->
+        <item name="android:statusBarColor">@color/transparent</item>
     </style>
 </resources>

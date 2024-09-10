@@ -5,6 +5,196 @@
     <string name="recommend">추천</string>
     <string name="home">홈</string>
     <string name="myPage">마이페이지</string>
+
+    <!-- 메인 -->
+    <string name="toast_back_main_page">뒤로가기를 한 번 더 누르시면 앱이 종료됩니다.</string>
+
+    <!-- 로그인 -->
+    <string name="login">로그인</string>
+    <string name="login_notice">트북이의 혜택과 정보를 얻으시려면\n로그인이 필요해요.</string>
+    <string name="login_hint_email">email</string>
+    <string name="login_hint_password">password</string>
+    <string name="forget_password">비밀번호를 잊으셨나요?</string>
+    <string name="login_kakao">카카오 ID로 로그인하기</string>
+    <string name="login_google">구글 ID로 로그인하기</string>
+
+    <!-- 회원가입 -->
+    <string name="sign_up">회원가입</string>
+    <string name="sign_up_notice">트북이 서비스 이용을 위해\n고객님의 정보가 필요해요.</string>
+    <string name="sign_up_label_email">이메일</string>
+    <string name="sign_up_hint_email">abcd@email.com</string>
+    <string name="sign_up_label_password">비밀번호</string>
+    <string name="sign_up_label_password_confirm">비밀번호 확인</string>
+    <string name="sign_up_hint_password">영문 대소문자, 숫자, 특수문자를 조합하여\n8~16자로 입력해주세요.</string>
+    <string name="sign_up_label_name">이름</string>
+    <string name="sign_up_hint_name">홍길동</string>
+    <string name="sign_up_label_address">주소</string>
+    <string name="sign_up_label_phone">전화번호</string>
+    <string name="sign_up_hint_phone">010-0000-0000</string>
+    <string name="toast_back_signup_page">페이지를 벗어나면 회원가입이 취소됩니다.</string>
+
+    <!-- 비밀번호 찾기 -->
+    <string name="forget_password_notice">아래의 정보를 입력하면\n비밀번호를 재설정 할 수 있어요.</string>
+    <string name="change_password">비밀번호 변경</string>
+    <string name="restore_password">비밀번호 재설정</string>
+    <string name="done_password">변경 완료</string>
+    <string name="toast_back_fp_page">페이지를 벗어나면 비밀번호 찾기가 취소됩니다.</string>
+
+    <!-- 사용 방식 선택 -->
+    <string name="use_option_notice">원하는 사용 방식을\n선택하세요.</string>
+    <string name="use_option_ai">AI 추천 모드</string>
+    <string name="use_option_normal">일반 모드</string>
+    <string name="use_option_confirm">선택 완료</string>
+    <string name="use_option_change_notice">마이페이지 > 환경설정에서 변경 가능합니다</string>
+
+    <!-- 일반 모드 화면 -->
+    <string name="filter_company">제조사</string>
+    <string name="filter_purpose">용도</string>
+    <string name="filter_weight">무게</string>
+    <string name="filter_price">가격대</string>
+
+    <!-- 추천 -->
+    <string name="next">다음으로</string>
+    <string-array name="question_list">
+        <item>선호하는 제조사를\n선택해주세요.</item>
+        <item>노트북 용도를\n선택해주세요.</item>
+        <item>노트북 무게를\n선택해주세요.</item>
+        <item>원하는 가격대를\n선택해주세요.</item>
+        <item>우측 숫자키(텐키)가\n필요한가요?</item>
+        <item>윈도우 자가설치가\n가능한가요?</item>
+        <item>화면 크기를\n선택해주세요.</item>
+    </string-array>
+    <string name="prefer_manufactor">선호하는 제조사를\n선택해주세요.</string>
+    <string-array name="manufactor_list">
+        <item>MSI</item>
+        <item>SAMSUNG</item>
+        <item>ASUS</item>
+        <item>LG</item>
+    </string-array>
+    <string name="usage">노트북 용도를\n선택해주세요.</string>
+    <string-array name="usage_list">
+        <item>가벼운 문서작업</item>
+        <item>그래픽 작업</item>
+        <item>고사양 작업</item>
+        <item>코딩</item>
+    </string-array>
+    <string name="notebook_weight">노트북 무게를\n선택해주세요.</string>
+    <string-array name="notebook_weight_list">
+        <item>1kg 이하</item>
+        <item>1.5kg 이하</item>
+        <item>2kg 이하</item>
+        <item>2.5kg 이하</item>
+        <item>상관없음</item>
+    </string-array>
+    <string name="price">원하는 가격대를\n선택해주세요.</string>
+    <string-array name="price_list">
+        <item>50만원 이하</item>
+        <item>75만원 이하</item>
+        <item>100만원 이하</item>
+        <item>150만원 이하</item>
+        <item>200만원 이하</item>
+        <item>200만원 이상</item>
+        <item>상관없음</item>
+    </string-array>
+    <string name="ten_key">우측 숫자키(텐키)가\n필요한가요?</string>
+    <string-array name="yes_no">
+        <item>예</item>
+        <item>아니오</item>
+    </string-array>
+    <string name="window">윈도우 자가설치가\n가능한가요?</string>
+    <string name="battery">
+        <item>10시간 이하</item>
+        <item>15시간 이하</item>
+        <item>20시간 이하</item>
+        <item>30시간 이하</item>
+        <item>상관없음</item>
+    </string>
+    <string name="display">화면 크기를\n선택해주세요.</string>
+    <string-array name="display_list">
+        <item>13.3인치</item>
+        <item>15.6인치</item>
+        <item>16인치</item>
+        <item>17인치</item>
+        <item>상관없음</item>
+    </string-array>
+    <string name="recommend_notebook">트북이의\n추천🎵</string>
+
+    <!-- 제품 상세 -->
+    <string name="product_detail">제품 정보</string>
+    <string name="product_cpu">CPU</string>
+    <string name="product_ram">램</string>
+    <string name="product_storage">저장용량</string>
+    <string name="product_resolution">해상도</string>
+    <string name="product_graphic">그래픽</string>
+    <string name="product_battery">배터리</string>
+    <string name="product_os">운영체제</string>
+    <string name="product_weight">무게</string>
+    <string name="product_shopping_cart">장바구니 담기</string>
+    <string name="product_buy">구매하기</string>
+    <string name="select_color">색상 선택하기</string>
+    <string name="select_count">구매 수량 선택</string>
+
+    <string name="product_cpu_info">CPU는 노트북의 성능과 작업 속도를 결정하는 중요한 요소입니다.</string>
+    <string name="product_ram_info">램(RAM)은 컴퓨터가 동시에 실행할 수 있는 프로그램과 데이터의 양을 결정합니다.</string>
+    <string name="product_storage_info">저장용량은 노트북에 저장할 수 있는 파일, 문서, 앱 등의 데이터 양을 결정합니다.</string>
+    <string name="product_resolution_info">해상도는 디스플레이의 화질과 선명도를 결정하는 요소입니다.</string>
+    <string name="product_graphic_info">그래픽은 시각적인 콘텐츠, 게임, 동영상 편집 등의 그래픽 처리에 관여합니다.</string>
+    <string name="product_battery_info">배터리 수명과 용량은 이동성과 사용시간을 결정하는 요소입니다.</string>
+    <string name="product_os_info">운영체제는 컴퓨터의 기능과 사용 편의성을 결정하는 핵심 소프트웨어입니다.</string>
+    <string name="product_weight_info">무게는 휴대성과 이동성을 결정하는 요소입니다. 일반적으로 1.5kg 이하면 가벼운 편입니다.</string>
+
+
+    <!-- 마이 페이지 -->
+    <string name="log_out">로그아웃</string>
+    <string name="address_setting">주소 설정</string>
+    <string name="order_list">주문 목록</string>
+    <string name="notice">공지사항</string>
+    <string name="customer_center">고객 센터</string>
+    <string name="setting">환경 설정</string>
+    <string name="exit_member">회원 탈퇴</string>
+    <string name="version">버전 정보</string>
+
+    <!-- 장바구니 -->
+    <string name="cart">장바구니</string>
+    <string name="all_choice">전체 선택</string>
+    <string name="product_name">상품 명</string>
+    <string name="manufacturing">제조사</string>
+    <string name="delivery_date">예상 도착 날짜</string>
+    <string name="product_price">상품 가격</string>
+    <string name="payment_amount">결제 금액</string>
+    <string name="product_price_amount">총 상품 금액</string>
+    <string name="delivery_fee_amount">총 배송비</string>
+    <string name="buy">구매하기</string>
+
+    <!-- 주문 및 결제 -->
+    <string name="order_pay">주문 / 결제</string>
+    <string name="order_info">주문자 정보</string>
+    <string name="name_number">성명 · 연락처</string>
+    <string name="address">주소</string>
+    <string name="order_product">주문 상품</string>
+    <string name="pay_amount">결제 금액</string>
+    <string name="total_product_amount">총 상품 금액</string>
+    <string name="total_delivery_fee">총 배송비</string>
+    <string name="total_pay_amount">총 상품 금액</string>
+    <string name="pay_method">결제 수단</string>
+    <string name="general_pay">일반 결제</string>
+    <string name="pay">결제하기</string>
+    <string name="product_count">2개</string>
+    <string name="order_pay_product_name">LG전자 2022 그램15(12세대) </string>
+    
+    <!-- 배송 조회 -->
+    <string name="tracking_delivery">배송 조회</string>
+    <string name="will_delivery">배송 준비 중</string>
+    <string name="delivering">배송 중</string>
+    <string name="delivered">배송 완료</string>
+    <string name="order_date">2020.01.01 주문</string>
+    <string name="expected_delivery_date">4/3(토) 도착 예정</string>
+    <string name="invoice_num">운송장 번호</string>
+    <string name="delivery_company">배송 업체</string>
+    <string name="delivery_address">배송 주소</string>
+    <string name="delivery_worker">배송원</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

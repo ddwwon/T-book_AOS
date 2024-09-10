@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 제품 상세 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context=".view.component.product_detail.ProductDetailFragment">
+
+    <!-- 헤더 -->
+    <RelativeLayout
+        android:id="@+id/relative_product_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <!-- 이전 페이지 이동 버튼 -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginVertical="10dp"
+            app:tint="@color/back_btn_gray"
+            android:src="@drawable/ic_back"
+            android:background="@color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <!-- 제품명 -->
+        <TextView
+            android:id="@+id/text_product_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text="LG전자 2022 그램15(12세대)"
+            android:textColor="@color/back_btn_gray"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_back"/>
+
+        <!-- 장바구니 -->
+        <ImageButton
+            android:id="@+id/btn_shopping_cart"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginRight="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_shopping_cart"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <!-- 제품 정보 영역 스크롤 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_product_header"
+        android:layout_above="@id/relative_buy_product"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 제품 정보 -->
+            <LinearLayout
+                android:id="@+id/linear_product_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="27dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="28dp"
+                android:orientation="vertical">
+
+                <!-- 제품 이미지 -->
+                <ImageView
+                    android:id="@+id/image_product_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/radius_for_image"/>
+
+                <!-- 제품명 -->
+                <TextView
+                    android:id="@+id/text_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="LG전자 2022 그램15(12세대)"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <!-- 제품 코드 -->
+                <TextView
+                    android:id="@+id/text_product_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="15ZD95Q-GX56K WIN11 (SSD 500GB)"
+                    android:textSize="10sp"
+                    android:textColor="@color/sign_label_gray"/>
+
+                <!-- 제조사 -->
+                <TextView
+                    android:id="@+id/text_product_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="제조사: LG"
+                    android:textSize="10sp"
+                    android:textColor="@color/sign_label_gray"/>
+
+            </LinearLayout>
+
+            <!-- 구분선 -->
+            <View
+                android:id="@+id/view_line1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/light_gray" />
+
+            <!-- 제품 상세 정보 -->
+            <LinearLayout
+                android:id="@+id/linear_product_info_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <!-- 라벨 -->
+                <TextView
+                    android:id="@+id/text_label_product_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_detail"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+                <!-- CPU, 램, 저장용량, 해상도, 그래픽, 배터리, 운영체제, 무게 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_product_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginBottom="10dp"
+                    android:nestedScrollingEnabled="false"
+                    android:overScrollMode="never"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_product_detail"
+                    android:layout_gravity="start"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 구매 -->
+    <RelativeLayout
+        android:id="@+id/relative_buy_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <!-- 구분선 -->
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/light_gray" />
+
+        <!-- 날짜 -->
+        <TextView
+            android:id="@+id/text_date_for_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:text="03/29 최저가"
+            android:textColor="@color/sign_label_gray"
+            android:textSize="10sp"
+            android:layout_below="@id/view_line2"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- 가격 -->
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:layout_marginTop="4dp"
+            android:text="1,341,350 원"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@id/text_date_for_price"
+            android:layout_alignParentEnd="true"/>
+
+        <!-- 장바구니, 구매하기 버튼 -->
+        <LinearLayout
+            android:id="@+id/linear_buy_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:layout_below="@id/text_price"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <!-- 장바구니 버튼 -->
+            <Button
+                android:id="@+id/btn_add_shopping_cart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingVertical="14dp"
+                android:layout_marginRight="14dp"
+                android:background="@drawable/mini_black_solid_button"
+                android:text="@string/product_shopping_cart"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <!-- 구매하기 버튼 -->
+            <Button
+                android:id="@+id/btn_buy_product"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingVertical="14dp"
+                android:background="@drawable/mini_green_solid_button"
+                android:text="@string/product_buy"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

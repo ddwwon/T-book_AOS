@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@id/btn_back"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/ic_back"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/order_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_pay"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"/>
+
+    <!-- 주문자 정보 -->
+    <TextView
+        android:id="@+id/order_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_info"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/order_pay"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/name_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_number"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/order_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="하도원"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_toLeftOf="@id/number"
+        android:layout_below="@id/order_info"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="010-1234-1234"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/order_info"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"/>
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/name_number"
+        android:layout_alignLeft="@id/name_number"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/address_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="경남 진주시 진주대로 501 30동 313호"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/name_number"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"/>
+
+    <View
+        android:id="@+id/div_line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/light_gray"
+        android:layout_below="@id/address"
+        android:layout_marginVertical="20dp" />
+
+    <!-- 주문 상품 -->
+    <TextView
+        android:id="@+id/order_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order_product"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/div_line1"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/product_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_count"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/div_line1"
+        android:layout_marginRight="20dp"/>
+
+
+    <ScrollView
+        android:id="@+id/scroll_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_below="@id/product_count"
+        android:layout_marginVertical="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_product_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            tools:listitem="@layout/product_list_item" />
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/div_line2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/light_gray"
+        android:layout_below="@id/scroll_product_list"
+        android:layout_marginBottom="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/pay_amount_and_method"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/div_line2"
+        android:layout_alignParentBottom="true">
+
+
+        <!-- 결제 금액 -->
+        <TextView
+            android:id="@+id/pay_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_amount"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/total_product_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_product_amount"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/pay_amount"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/total_product_amount_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2,682,700원"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_below="@id/pay_amount"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/total_delivery_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_delivery_fee"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_below="@id/total_product_amount"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@id/total_product_amount"/>
+
+        <TextView
+            android:id="@+id/total_delivery_fee_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:text="2,500원"
+            android:layout_alignRight="@id/total_product_amount_num"
+            android:layout_below="@id/total_product_amount"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/total_pay_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_pay_amount"
+            android:layout_alignLeft="@id/total_delivery_fee"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/total_delivery_fee"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/total_pay_amount_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/main_color"
+            android:layout_below="@id/total_delivery_fee_num"
+            android:layout_alignRight="@id/total_delivery_fee_num"
+            android:text="2,685,200원"
+            android:layout_marginTop="10dp"/>
+
+        <View
+            android:id="@+id/div_line3"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/light_gray"
+            android:layout_below="@id/total_pay_amount"
+            android:layout_marginVertical="20dp" />
+
+        <!-- 결제 수단 -->
+        <TextView
+            android:id="@+id/pay_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_method"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/div_line3"
+            android:layout_marginLeft="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/choice_pay_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pay_method"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/kakao_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_kakaopay"/>
+
+            <RadioButton
+                android:id="@+id/genaral_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:text="@string/general_pay"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/green_solid_button"
+            android:text="@string/pay"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

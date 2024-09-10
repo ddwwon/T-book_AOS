@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp">
+
+    <View
+        android:id="@+id/div_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_gray"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_check"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:background="@drawable/ic_check"
+        android:layout_below="@id/div_line"
+        />
+    
+    <TextView
+        android:id="@+id/text_product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:text="@string/product_name"
+        android:layout_toEndOf="@id/btn_check"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/div_line"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/image_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/notebook"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/btn_check"/>
+
+    <TextView
+        android:id="@+id/text_manufacturing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:text="@string/manufacturing"
+        android:layout_toEndOf="@id/image_product"
+        android:layout_below="@id/text_product_name"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/middle_gray"/>
+
+    <TextView
+        android:id="@+id/text_delivery_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delivery_date"
+        android:textSize="11sp"
+        android:textColor="@color/middle_gray"
+        android:layout_below="@id/text_manufacturing"
+        android:layout_toEndOf="@id/image_product"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/text_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_price"
+        android:textSize="11sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/text_delivery_date"
+        android:layout_toEndOf="@id/image_product"
+        android:layout_marginStart="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/count_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_delivery_date"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="-"
+            android:background="@color/transparent"
+            android:textColor="@color/middle_gray"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/product_count"
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:background="@drawable/gray_line_layout"
+            android:text="1"
+            android:gravity="center"
+            android:textColor="@color/middle_gray"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="+"
+            android:background="@color/transparent"
+            android:textColor="@color/middle_gray"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
